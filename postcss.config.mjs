@@ -1,4 +1,3 @@
-import postcssColorMix from "postcss-color-mix";
 import postcssEach from "postcss-each";
 import postcssEachVariables from "postcss-each-variables";
 import postcssFor from "postcss-for";
@@ -9,7 +8,6 @@ export default {
     postcssEachVariables(),
     postcssEach(),
     postcssFor(),
-    postcssColorMix(),
     postcssNested(),
   ],
 };
