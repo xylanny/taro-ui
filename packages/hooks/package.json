@@ -1,0 +1,9 @@
+{
+  "name": "@taro-ui/hooks",
+  "version": "0.0.1",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"no tests yet\" && exit 0"
+  }
+}

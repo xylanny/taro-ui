@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"no tests yet\" && exit 0"
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
   }
 }

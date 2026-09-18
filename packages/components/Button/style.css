@@ -1,0 +1,186 @@
+.ta-button {
+    --ta-button-height: 32px;
+    --ta-button-padding-x: 15px;
+    --ta-button-font-size: var(--ta-font-size-base);
+    --ta-button-radius: var(--ta-border-radius-base);
+
+    --ta-button-color: var(--ta-color-text-regular);
+    --ta-button-bg: var(--ta-color-bg);
+    --ta-button-border: var(--ta-color-border);
+
+    --ta-button-color-hover: var(--ta-color-primary);
+    --ta-button-bg-hover: var(--ta-color-primary-light);
+    --ta-button-border-hover: var(--ta-color-primary-lighter);
+
+    --ta-button-color-active: var(--ta-color-primary-dark);
+    --ta-button-bg-active: var(--ta-color-primary-lighter);
+    --ta-button-border-active: var(--ta-color-primary-dark);
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-sizing: border-box;
+    height: var(--ta-button-height);
+    padding: 0 var(--ta-button-padding-x);
+    margin: 0;
+    font-family: inherit;
+    font-size: var(--ta-button-font-size);
+    font-weight: var(--ta-font-weight-medium);
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: var(--ta-button-color);
+    background-color: var(--ta-button-bg);
+    border: 1px solid var(--ta-button-border);
+    border-radius: var(--ta-button-radius);
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        color var(--ta-transition-duration) var(--ta-transition-function),
+        background-color var(--ta-transition-duration) var(--ta-transition-function),
+        border-color var(--ta-transition-duration) var(--ta-transition-function),
+        box-shadow var(--ta-transition-duration) var(--ta-transition-function);
+
+    &:hover {
+        color: var(--ta-button-color-hover);
+        background-color: var(--ta-button-bg-hover);
+        border-color: var(--ta-button-border-hover);
+    }
+
+    &:active {
+        color: var(--ta-button-color-active);
+        background-color: var(--ta-button-bg-active);
+        border-color: var(--ta-button-border-active);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--ta-color-primary);
+        outline-offset: 1px;
+    }
+}
+
+@each $type in primary,
+success,
+warning,
+danger,
+info {
+    .ta-button--$(type) {
+        --ta-button-color: var(--ta-color-white);
+        --ta-button-bg: var(--ta-color-$(type));
+        --ta-button-border: var(--ta-color-$(type));
+
+        --ta-button-color-hover: var(--ta-color-white);
+        --ta-button-bg-hover: var(--ta-color-$(type)-dark);
+        --ta-button-border-hover: var(--ta-color-$(type)-dark);
+
+        --ta-button-color-active: var(--ta-color-white);
+        --ta-button-bg-active: var(--ta-color-$(type)-darker);
+        --ta-button-border-active: var(--ta-color-$(type)-darker);
+
+        &.is-plain {
+            --ta-button-color: var(--ta-color-$(type));
+            --ta-button-bg: var(--ta-color-$(type)-light);
+            --ta-button-border: var(--ta-color-$(type)-lighter);
+
+            --ta-button-color-hover: var(--ta-color-white);
+            --ta-button-bg-hover: var(--ta-color-$(type));
+            --ta-button-border-hover: var(--ta-color-$(type));
+
+            --ta-button-color-active: var(--ta-color-white);
+            --ta-button-bg-active: var(--ta-color-$(type)-dark);
+            --ta-button-border-active: var(--ta-color-$(type)-dark);
+        }
+    }
+}
+
+/* 尺寸 */
+.ta-button--large {
+    --ta-button-height: 40px;
+    --ta-button-padding-x: 20px;
+    --ta-button-font-size: var(--ta-font-size-lg);
+}
+
+.ta-button--default {
+    --ta-button-height: 32px;
+    --ta-button-padding-x: 15px;
+    --ta-button-font-size: var(--ta-font-size-base);
+}
+
+.ta-button--small {
+    --ta-button-height: 24px;
+    --ta-button-padding-x: 10px;
+    --ta-button-font-size: var(--ta-font-size-sm);
+}
+
+/* 形状 */
+.ta-button.is-round {
+    --ta-button-radius: var(--ta-border-radius-round);
+}
+
+.ta-button.is-circle {
+    --ta-button-padding-x: 0;
+    --ta-button-radius: 50%;
+
+    width: var(--ta-button-height);
+    flex: none;
+}
+
+/* 禁用 */
+.ta-button.is-disabled {
+    --ta-button-color: var(--ta-color-text-disabled);
+    --ta-button-bg: var(--ta-color-bg-disabled);
+    --ta-button-border: var(--ta-color-border-light);
+
+    --ta-button-color-hover: var(--ta-color-text-disabled);
+    --ta-button-bg-hover: var(--ta-color-bg-disabled);
+    --ta-button-border-hover: var(--ta-color-border-light);
+
+    --ta-button-color-active: var(--ta-color-text-disabled);
+    --ta-button-bg-active: var(--ta-color-bg-disabled);
+    --ta-button-border-active: var(--ta-color-border-light);
+
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* 加载中 */
+/* 这里只做交互与图标约束 */
+.ta-button.is-loading {
+    cursor: default;
+    pointer-events: none;
+}
+
+/* 图标 */
+.ta-button__icon {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/*
+ * 未传 loadingIcon 时的内置加载指示器。
+ * 传了 loadingIcon 后这个类名会被替换掉，此处样式自然不会再生效。
+ */
+.ta-button__icon--loading {
+    box-sizing: border-box;
+    width: 1em;
+    height: 1em;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: ta-button-loading-rotate 0.8s linear infinite;
+}
+
+@keyframes ta-button-loading-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}

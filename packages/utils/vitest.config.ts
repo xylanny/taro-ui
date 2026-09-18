@@ -14,6 +14,7 @@ export default defineConfig({
       reporter: ["text"], // 覆盖率报告输出格式采用终端输出
       include: ["**/*.{ts,tsx,vue}"], // 统计范围
       exclude: [
+        "index.ts",
         "**/*.config.ts",
         "**/*.d.ts",
         "**/__tests__/**",
