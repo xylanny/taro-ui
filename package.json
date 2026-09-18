@@ -1,0 +1,11 @@
+{
+  "name": "taro-ui/workspace",
+  "version": "0.0.1",
+  "private": true,
+  "description": "one component lib created mainly by Vue3 + TS!",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "pnpm -r test"
+  }
+}
