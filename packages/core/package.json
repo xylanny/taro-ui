@@ -5,5 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"no tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "@taro-ui/theme": "workspace:*",
+    "@taro-ui/components": "workspace:*"
   }
 }

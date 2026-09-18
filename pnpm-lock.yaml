@@ -75,7 +75,14 @@ importers:
 
   packages/components: {}
 
-  packages/core: {}
+  packages/core:
+    dependencies:
+      '@taro-ui/components':
+        specifier: workspace:*
+        version: link:../components
+      '@taro-ui/theme':
+        specifier: workspace:*
+        version: link:../theme
 
   packages/docs: {}
 
