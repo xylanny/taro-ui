@@ -1,0 +1,81 @@
+@import url("./reset.css");
+
+:root {
+    /* 主颜色 */
+    --ta-color-primary: #6190e8;
+    --ta-color-success: #13ce66;
+    --ta-color-warning: #ffc82c;
+    --ta-color-danger: #ff4949;
+    --ta-color-info: #78a4fa;
+
+    /* 浅色 */
+    --ta-color-primary-light: #ecf2fc;
+    --ta-color-success-light: #e3f9ed;
+    --ta-color-warning-light: #fff8e6;
+    --ta-color-danger-light: #ffe9e9;
+    --ta-color-info-light: #eff4fe;
+
+    /* 更浅色 */
+    --ta-color-primary-lighter: #d8e3f9;
+    --ta-color-success-lighter: #c4f3d9;
+    --ta-color-warning-lighter: #fff1ca;
+    --ta-color-danger-lighter: #ffd2d2;
+    --ta-color-info-lighter: #dde8fe;
+
+    /* 深色(hover) */
+    --ta-color-primary-dark: #527ac5;
+    --ta-color-success-dark: #10af57;
+    --ta-color-warning-dark: #d9aa25;
+    --ta-color-danger-dark: #d93e3e;
+    --ta-color-info-dark: #668bd5;
+
+    /* 更深色(active) */
+    --ta-color-primary-darker: #4668a7;
+    --ta-color-success-darker: #0e9449;
+    --ta-color-warning-darker: #b89020;
+    --ta-color-danger-darker: #b83535;
+    --ta-color-info-darker: #5676b4;
+
+    /* 中性色 */
+    --ta-color-white: #ffffff;
+    --ta-color-black: #000000;
+
+    --ta-color-text: #1f2d3d;
+    --ta-color-text-regular: #4a5a6a;
+    --ta-color-text-secondary: #6b7a8f;
+    --ta-color-text-placeholder: #a8b1bd;
+    --ta-color-text-disabled: #bfc4cc;
+
+    --ta-color-border: #dcdfe6;
+    --ta-color-border-light: #e4e7ed;
+    --ta-color-border-lighter: #ebeef5;
+
+    --ta-color-bg: #ffffff;
+    --ta-color-bg-page: #f7f8fa;
+    --ta-color-bg-disabled: #f5f6f8;
+
+    /* 字体 */
+    --ta-font-family:
+        -apple-system, blinkmacsystemfont, "Helvetica Neue", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
+    --ta-font-size-sm: 12px;
+    --ta-font-size-base: 14px;
+    --ta-font-size-lg: 16px;
+    --ta-font-weight-medium: 500;
+
+    /* 圆角 */
+    --ta-border-radius-sm: 2px;
+    --ta-border-radius-base: 4px;
+    --ta-border-radius-lg: 8px;
+    --ta-border-radius-round: 999px;
+
+    /* 动效 */
+    --ta-transition-duration: 0.2s;
+    --ta-transition-function: ease-in-out;
+    --ta-transition-base: all var(--ta-transition-duration) var(--ta-transition-function);
+
+    /* 阴影 */
+    --ta-box-shadow-sm: 0 1px 2px rgb(31 45 61 / 8%);
+    --ta-box-shadow-base: 0 2px 8px rgb(31 45 61 / 12%);
+    --ta-box-shadow-lg: 0 6px 20px rgb(31 45 61 / 16%);
+}
