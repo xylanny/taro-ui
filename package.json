@@ -11,6 +11,11 @@
   "devDependencies": {
     "@types/node": "^26.0.1",
     "@vue/tsconfig": "^0.9.1",
+    "postcss-color-mix": "^1.1.0",
+    "postcss-each": "^1.1.0",
+    "postcss-each-variables": "^0.3.0",
+    "postcss-for": "^2.1.1",
+    "postcss-nested": "^6.2.0",
     "typescript": "^6.0.2",
     "vite": "^8.3.0"
   }
