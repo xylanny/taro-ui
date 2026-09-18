@@ -1,0 +1,17 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+
+  "include": ["packages/**/*.config.ts"],
+
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["node"]
+  }
+}

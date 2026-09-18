@@ -7,5 +7,11 @@
   "type": "module",
   "scripts": {
     "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "@vue/tsconfig": "^0.9.1",
+    "typescript": "^6.0.2",
+    "vite": "^8.3.0"
   }
 }

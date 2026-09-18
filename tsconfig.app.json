@@ -1,0 +1,16 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+
+  "include": ["packages/**/*.ts", "packages/**/*.vue"],
+  "exclude": ["packages/**/*.config.ts"],
+
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "types": ["vite/client"],
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}
