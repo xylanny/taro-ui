@@ -6,6 +6,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
     "test": "pnpm -r test",
     "coverage": "pnpm -r coverage",
     "typecheck": "vue-tsc -b"
