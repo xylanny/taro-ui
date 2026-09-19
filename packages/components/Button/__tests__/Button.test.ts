@@ -53,7 +53,7 @@ describe("按钮渲染", () => {
 });
 
 describe("按钮变体", () => {
-  it("使用type与size生成对应变体类，都不传时不生成", () => {
+  it("使用type与size生成对应变体类；默认 type 为 primary，不传 size 不生成", () => {
     for (const type of [
       "primary",
       "success",
@@ -71,10 +71,16 @@ describe("按钮变体", () => {
       );
     }
 
+    // 组件把 type 的默认值设成了 primary
+    expect(mount(Button).classes()).toContain("ta-button--primary");
+    // size 没有默认值，不传就不应生成任何 size 变体类
     expect(
       mount(Button)
         .classes()
-        .filter((name) => name.startsWith("ta-button--")),
+        .filter(
+          (name) =>
+            name.startsWith("ta-button--") && name !== "ta-button--primary",
+        ),
     ).toEqual([]);
   });
 

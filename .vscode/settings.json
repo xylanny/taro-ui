@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["esbuild", "nvmrc", "peaceiris", "vitepress"]
+  "cSpell.words": [
+    "esbuild",
+    "fortawesome",
+    "nvmrc",
+    "peaceiris",
+    "vitepress",
+    "xmark"
+  ]
 }
