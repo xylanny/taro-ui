@@ -1,6 +1,6 @@
 {
   "name": "taro-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "one component lib created mainly by Vue3 + TS!",
   "type": "module",
   "main": "./dist/es/index.js",
