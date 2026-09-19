@@ -11,9 +11,13 @@
     "typecheck": "vue-tsc -b",
     "test": "pnpm -r test",
     "coverage": "pnpm -r coverage",
-    "build": "pnpm --filter taro-ui build"
+    "build": "pnpm --filter taro-ui build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm run build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^3.0.3",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^26.0.1",
     "@vitejs/plugin-vue": "^6.0.9",
