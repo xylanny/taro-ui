@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"no tests yet\" && exit 0",
-    "dev": "vitepress dev",
-    "build": "vitepress build"
+    "docs": "vitepress dev",
+    "docs:build": "vitepress build"
   },
   "devDependencies": {
     "vitepress": "^1.6.4"

@@ -4,6 +4,17 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
     "test": "echo \"no tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "@taro-ui/components": "workspace:*",
+    "@taro-ui/theme": "workspace:*"
+  },
+  "devDependencies": {
+    "@storybook/vue3-vite": "^10.6.0",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "storybook": "^10.6.0"
   }
 }

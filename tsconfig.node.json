@@ -1,7 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
 
-  "include": ["packages/**/*.config.ts"],
+  "include": ["packages/**/*.config.ts", "packages/*/.vitepress/**/*.ts"],
 
   "compilerOptions": {
     "composite": true,

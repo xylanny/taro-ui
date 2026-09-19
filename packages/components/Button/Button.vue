@@ -38,6 +38,7 @@ import { throttle } from "lodash-es";
 
 const props = withDefaults(defineProps<ButtonProps>(), {
   tag: "button", // 使用button元素
+  type: "primary",
   nativeType: "button",
   throttling: true, // 使用节流
   duration: 500,

@@ -6,7 +6,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "pnpm -r dev",
+    "docs": "pnpm --filter @taro-ui/docs docs",
+    "storybook": "pnpm --filter @taro-ui/play storybook",
     "build": "pnpm -r build",
     "test": "pnpm -r test",
     "coverage": "pnpm -r coverage",
