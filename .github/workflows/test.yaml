@@ -1,0 +1,47 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  # PR 阶段就跑，问题在合并前暴露
+  pull_request:
+  # 支持在Actions页面手动触发一次，方便验证工作流
+  workflow_dispatch:
+
+# 本工作流不写仓库内容，只读即可
+permissions:
+  contents: read
+
+# 同一分支只保留最新一次运行
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Run Type Check and Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 11
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: pnpm run typecheck
+
+      # pnpm -r test 会依次执行各子包的 test
+      # （utils/components/@taro-ui/vue 跑 vitest，其余子包是占位脚本）
+      - name: Unit tests
+        run: pnpm run test
