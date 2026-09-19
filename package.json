@@ -1,5 +1,5 @@
 {
-  "name": "taro-ui/workspace",
+  "name": "@taro-ui/workspace",
   "version": "0.0.1",
   "private": true,
   "description": "one component lib created mainly by Vue3 + TS!",
@@ -11,7 +11,7 @@
     "typecheck": "vue-tsc -b",
     "test": "pnpm -r test",
     "coverage": "pnpm -r coverage",
-    "build": "pnpm --filter taro-ui build",
+    "build": "pnpm --filter @taro-ui/vue build",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "pnpm run build && changeset publish"
@@ -41,8 +41,8 @@
     "@taro-ui/hooks": "workspace:*",
     "@taro-ui/theme": "workspace:*",
     "@taro-ui/utils": "workspace:*",
+    "@taro-ui/vue": "workspace:*",
     "lodash-es": "^4.18.1",
-    "taro-ui": "workspace:*",
     "vue": "^3.5.42"
   }
 }

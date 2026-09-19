@@ -73,7 +73,7 @@ export default defineConfig({
           return assetInfo.name as string;
         },
 
-        advancedChunks: {
+        codeSplitting: {
           groups: chunkGroups,
         },
       },

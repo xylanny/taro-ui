@@ -1,5 +1,5 @@
 {
-  "name": "taro-ui",
+  "name": "@taro-ui/vue",
   "version": "0.0.2",
   "description": "one component lib created mainly by Vue3 + TS!",
   "type": "module",
@@ -23,6 +23,9 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "test": "vitest run",

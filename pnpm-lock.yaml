@@ -26,12 +26,12 @@ importers:
       '@taro-ui/utils':
         specifier: workspace:*
         version: link:packages/utils
+      '@taro-ui/vue':
+        specifier: workspace:*
+        version: link:packages/core
       lodash-es:
         specifier: ^4.18.1
         version: 4.18.1
-      taro-ui:
-        specifier: workspace:*
-        version: link:packages/core
       vue:
         specifier: ^3.5.42
         version: 3.5.42(typescript@6.0.2)
