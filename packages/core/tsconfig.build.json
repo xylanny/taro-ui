@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig.app.json",
+
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": false,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.core.build.tsbuildinfo",
+    "rootDir": ".."
+  },
+
+  "include": [
+    "*.ts",
+    "../components/**/*.ts",
+    "../components/**/*.vue",
+    "../utils/**/*.ts"
+  ],
+
+  "exclude": [
+    "**/__tests__/**",
+    "../components/**/__tests__/**",
+    "../utils/**/__tests__/**",
+    "**/*.config.ts",
+    "../components/*.config.ts",
+    "../utils/*.config.ts",
+    "dist/**"
+  ]
+}
